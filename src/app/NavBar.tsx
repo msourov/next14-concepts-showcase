@@ -15,7 +15,7 @@ export default function NavBar() {
       collapseOnSelect
     >
       <Container>
-        <Navbar.Brand href="/">NextJs 14</Navbar.Brand>
+        <Navbar.Brand href="/">Next 14</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
