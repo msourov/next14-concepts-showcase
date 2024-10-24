@@ -24,7 +24,10 @@ export default function SearchPage() {
         setSearchResultsLoading(true);
         const response = await fetch("/api/search?query=" + query);
         const images: UnsplashImage[] = await response.json();
-        setSearchResults(images);
+        const validImages = images.filter(
+          (image) => image.urls && image.urls.raw
+        );
+        setSearchResults(validImages);
       } catch (error) {
         console.error(error);
         setSearchResultsLoadingIsError(true);
